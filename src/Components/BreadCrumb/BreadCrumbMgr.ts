@@ -7,6 +7,11 @@ export interface ICrumb {
 }
 
 class BreadCrumbMgr extends UpdateMgr {
+	constructor(crumbs?: Array<BreadCrumbItem>) {
+		super();
+		this._crumbs = crumbs || [this.defaultCrumb];
+	}
+
 	/**
 	 * BreadCrumbMgr Properties
 	 */
@@ -37,10 +42,6 @@ class BreadCrumbMgr extends UpdateMgr {
 	__proto__: any;
 	// ===== End Public Properties ===== //
 
-	constructor(crumbs?: Array<BreadCrumbItem>) {
-		super();
-		this._crumbs = crumbs || [this.defaultCrumb];
-	}
 	/**
 	 * BreadCrumbMgr Methods
 	 */
