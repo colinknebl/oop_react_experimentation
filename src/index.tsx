@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import BreadCrumbMgr from './Components/BreadCrumb/BreadCrumbMgr';
+
+export const AppBreadCrumbMgr: BreadCrumbMgr = new BreadCrumbMgr();
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
